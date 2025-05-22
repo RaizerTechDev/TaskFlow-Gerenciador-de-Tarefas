@@ -1,0 +1,28 @@
+{
+  "name": "task-manager",
+  "version": "1.0.0",
+  "description": "Fullstack Task Manager Application",
+  "private": true,
+  "scripts": {
+    "start": "node backend/src/server.js",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "build": "cd frontend && npm run build",
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "test": "cd backend && npm test",
+    "debug:api": "curl -v http://localhost:5000/api/auth/test || echo 'Erro: Backend não respondeu'",
+    "debug:env": "echo \"VITE_API_URL=$VITE_API_URL\" && echo \"Process Env: \" && node -e \"console.log(process.env)\""
+  },
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "task-manager": "file:"
+  }
+}

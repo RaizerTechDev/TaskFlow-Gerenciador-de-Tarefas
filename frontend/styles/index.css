@@ -1,0 +1,311 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply m-0 p-0 min-h-screen text-white;
+   margin: 0;
+  min-height: 100vh;
+  color: white;
+  overflow: hidden;
+}
+
+.main-content {
+  @apply h-screen flex flex-col;
+  position: relative;
+  z-index: 10;
+}
+
+nav {
+  @apply fixed top-0 left-0 right-0 h-20 flex justify-between items-center;
+  background: linear-gradient(to bottom, #131727, #2b355a, #131727);
+  padding: 0 25px;
+  top: 4px;
+  z-index: 100;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 15px
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  height: 100%;
+}
+
+.text-xl {
+  @apply text-white font-bold;
+  font-size: 2.25rem;
+}
+
+.text-xl:active {
+  color: #86efac;
+}
+
+.nav-brand span {
+  font-size: 1.65rem;  
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-xl shadow-md hover:from-blue-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 active:scale-95 transform transition-all duration-200;
+  font-size: 1.25rem;
+}
+
+/* Estilos específicos para o Login */
+.login-container {
+  @apply max-w-md mx-auto bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700;
+  margin-top: 80px;
+}
+
+.login-title {
+  @apply text-3xl font-bold text-center text-purple-400 mb-8;
+}
+
+.login-form {
+  @apply space-y-6;
+}
+
+.form-group {
+  @apply space-y-2;
+}
+
+.form-group label {
+  @apply block text-sm font-medium text-gray-300;
+}
+
+.form-group input {
+  @apply w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-purple-500;
+}
+
+.login-button {
+  @apply w-full py-2 px-4 bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium rounded-md hover:from-purple-700 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-200;
+}
+
+.login-button:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.login-footer {
+  @apply mt-6 text-center text-sm text-gray-400;
+}
+
+.register-link {
+  @apply text-purple-400 hover:text-purple-300 hover:underline;
+}
+
+/* Estilos específicos para o Register */
+.register-container {
+  @apply max-w-md mx-auto bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700;
+  margin-top: 80px;
+}
+
+.register-title {
+  @apply text-3xl font-bold text-center text-purple-400 mb-8;
+}
+
+.register-form {
+  @apply space-y-6;
+}
+
+.input-field {
+  @apply w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-purple-500;
+}
+
+.register-button {
+  @apply w-full py-2 px-4 bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium rounded-md hover:from-purple-700 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-200;
+}
+
+.register-button:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.register-footer {
+  @apply mt-6 text-center text-sm text-gray-400;
+}
+
+.login-link {
+  @apply text-purple-400 hover:text-purple-300 hover:underline;
+}
+
+/* Estilo para o grupo de formulário com ícone de olho */
+.password-group {
+  @apply relative;
+}
+
+/* Estilo para o ícone de mostrar/esconder senha */
+.toggle-password {
+  @apply absolute right-3 top-1/2 -translate-y-1/2;
+  @apply h-5 w-5 text-gray-400 hover:text-purple-500;
+  @apply cursor-pointer transition-colors duration-200;
+}
+
+/* Estilo específico para o container de senha */
+.password-container {
+  position: relative;
+}
+
+/* Garante que o input ocupe toda a largura */
+.password-container input {
+  width: 100%;
+}
+
+/* Estilos para autocomplete */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #374151 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Estilo para inputs com autocomplete */
+input.autocomplete {
+  @apply bg-gray-700;
+}
+input.autocomplete:-webkit-autofill {
+  @apply bg-gray-700;
+}
+
+.custom-bg {
+  background: linear-gradient(to bottom, #131727, #2b355a, #131727);
+}
+
+.text-2xl{
+  margin-top: 35px;
+  font-size: 1.5rem,
+}
+
+.new-task{
+  margin-top: 120px;
+}
+
+.text-new-task{
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 1.8rem;
+  color: #86efac;
+}
+
+.input-field{
+  font-size: 1.5rem;
+}
+
+.mt-1 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.mt-2 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.mt-4 {
+  margin-top: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: linear-gradient(to bottom, #131727, #2b355a, #131727); 
+}
+
+.text-form{
+  margin-left: 20px;
+}
+
+/* Estilos para a lista de tarefas com scroll */
+.task-list {
+  @apply overflow-y-auto;
+  max-height: 65vh; /* Altura máxima de 65% da viewport */
+}
+
+/* Customização da scrollbar */
+.task-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.task-list::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-full hover:bg-gray-500;
+}
+
+/* Estilos para o formulário com scroll */
+.task-form-scroll {
+  @apply overflow-y-auto;
+  max-height: 70vh; /* Altura máxima de 70% da viewport */
+}
+
+/* Customização da scrollbar do formulário */
+.task-form-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.task-form-scroll::-webkit-scrollbar-thumb {
+  @apply bg-gray-500 rounded-full;
+}
+
+@media (max-width: 768px) {
+
+  .text-xl{
+    font-size: 1.5rem;
+    margin-top: 8px;
+  }
+
+  .nav-links{
+    gap: 10px; 
+  }
+
+  .nav-brand {
+    font-size: 1.5rem;
+  }
+  
+  .nav-brand span {
+    font-size: 1.2rem;
+  }
+  
+  .btn-primary {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .register-container {
+    @apply mx-4;
+    margin-top: 60px;
+  }
+
+  .login-form input {
+  margin-top: 15px;
+   
+  }
+
+  .text-2xl{
+    margin-top: 35px;
+    font-size: 1.5rem,
+  }
+  
+  .relative {
+    margin-top: -10px;
+  }
+
+  .margin-image
+  {
+    margin-top: -40px;
+  }
+
+  .task-list {
+    max-height: 55vh;
+  }
+  
+  .task-form-scroll {
+    max-height: 60vh;
+  }
+}  
+
