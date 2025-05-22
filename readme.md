@@ -6,7 +6,7 @@
 
 <img src="frontend/public/doc.png" alt="Imagem-Documentacao" height="35" />
 
-[![Documentação](https://img.shields.io/badge/Documentação-Oficial-success)](https://github.com/RaizerTechDev/projeto-raizer-digital-solutions/blob/master/Documentation.md)
+[![Documentação](https://img.shields.io/badge/Documentação-Oficial-success)](https://github.com/RaizerTechDev/TaskFlow-Gerenciador-de-Tarefas/blob/master/Documentation.md)
 
 [( Clique aqui para se `Cadastar` e criar suas `Tasks`)](/)
 
@@ -32,6 +32,7 @@
 - [Execução](#-execução)
 - [Banco de Dados](#acessar-o-banco-de-dados)
 - [Frontend](#️-frontend)
+- [Implentações de Branches](#implementações-de-branches)
 - [Licença](#licença)
 - [Autor](#-autor)
 
@@ -227,6 +228,18 @@ npm run dev
   - Frontend: 5180
 
 <br>
+
+---
+
+## Implementações de branches
+
+1. Desenvolvimento Front-End  
+  - [release/desenvolvimento-front-end](https://github.com/RaizerTechDev/TaskFlow-Gerenciador-de-Tarefas/tree/release/frontend/frontend)
+  
+2. Desenvolvimento Back-End 
+- [release/desenvolvimento-back-end](https://github.com/RaizerTechDev/TaskFlow-Gerenciador-de-Tarefas/tree/master/backend) 
+
+br>
 
 ---
 
