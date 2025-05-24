@@ -25,10 +25,12 @@
 
 - [Objetivo](#objetivo)
 - [Tecnologias](#tecnologias)
-- [Configuração e Instalação](#️configuração-e-instalação)
-  - [Pré-requisitos](#pré-requisitos)
-  - [Instalação](#-instalação) 
 - [Documentação da API](#-documentação-da-api)
+- [Configuração e Instalação dos Ambientes](#️configuração-e-instalação-dos-ambientes)
+  - [Pré-requisitos](#pré-requisitos)
+  - [Instalação FrontEnd](#-instalação-frontend)
+  - [Instalação Backend](#-instalação-backend) 
+  - [Instalação Docker](#-instalação-do-docker)  
 - [Execução](#-execução)
 - [Banco de Dados](#acessar-o-banco-de-dados)
 - [Frontend](#️-frontend)
@@ -65,19 +67,38 @@ Um aplicativo completo de gerenciamento de tarefas com backend (Node.js/Express)
 ![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker)
 ![Postman](https://img.shields.io/badge/-Postman-FF6C37?logo=postman)
 
+
 <br>
 
 ---
 
-## 🛠️Configuração e Instalação
+## 📚 Documentação da API
+[Run in Postman](https://documenter.getpostman.com/view/19569624/2sB2qWH4Yv)
+
+Endpoints principais:
+
+POST /api/auth/register - Registro de usuário
+
+POST /api/auth/login - Autenticação
+
+GET /api/tasks - Listar tarefas
+
+POST /api/tasks - Criar tarefa
+
+PUT /api/tasks/:id - Atualizar tarefa
+
+<br>
+
+---
+
+## 🛠️Configuração e Instalação dos Ambientes
 
 ### Pré-requisitos
 - Node.js v18+
 - Docker v20+
 - PostgreSQL 15
 
-### 📦 Instalação
-
+### 📦 Instalação FrontEnd
 
 #### Criar projeto React com Vite
 ```bash
@@ -101,7 +122,66 @@ npx tailwindcss init -p
 
 <br>
 
-#### Dependências Backend + Frontend
+### 📦 Instalação BackEnd
+
+#### Dependências principais
+```bash
+npm install express express-async-handler cors dotenv bcryptjs jest jsonwebtoken nodemon sequelize 
+```
+
+### 🐋 Instalação do Docker
+
+Antes de executar os serviços, é necessário ter o Docker instalado. Siga as instruções de acordo com seu sistema operacional:
+
+#### Para Windows/macOS (Docker Desktop):
+
+- Baixe o Docker Desktop
+🔗 [Download Docker Desktop](https://www.docker.com/products/docker-desktop/)
+
+- Recomendado para desenvolvimento local.
+
+- Instale e Inicie
+
+- Execute o instalador baixado
+
+- Inicie o Docker Desktop após a instalação
+
+- Aguarde até que o ícone do Docker na bandeja/barra de menus indique que está em execução (⏳→🐳)
+
+#### Para Linux (Docker Engine):
+
+```bash
+1. Atualize os pacotes
+sudo apt-get update
+
+2. Instale dependências
+sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
+
+3. Adicione o repositório oficial do Docker
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+4. Instale o Docker Engine
+sudo apt-get update
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+
+5. Adicione seu usuário ao grupo docker (evita usar sudo)
+sudo usermod -aG docker $USER
+newgrp docker  # Recarrega as permissões (ou reinicie o terminal)
+de teste
+```
+
+#### Verifique a Instalação
+bash
+docker --version           # Deve mostrar a versão instalada
+docker run hello-world     # Executa um contêiner 
+
+<br>
+
+---
+
+
+#### Dependências Backend + Frontend + Docker
 ```bash
 npm install
 ```
@@ -117,32 +197,10 @@ npm list
 
 ---
 
-## 📚 Documentação da API
-[Run in Postman](https://documenter.getpostman.com/view/19569624/2sB2qWH4Yv)
-
-Endpoints principais:
-
-POST /api/auth/register - Registro de usuário
-
-POST /api/auth/login - Autenticação
-
-GET /api/tasks - Listar tarefas
-
-POST /api/tasks - Criar tarefa
-
-PUT /api/tasks/:id - Atualizar tarefa
-
-
-<br>
-
----
-
 ## 🚀 Execução
 
-<br>
-
-
 ### Iniciar todos os serviços (Docker)
+
 ```bash
 docker-compose -f docker/docker-compose.yml up --build
 ```
