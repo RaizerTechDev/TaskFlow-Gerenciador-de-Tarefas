@@ -23,6 +23,7 @@
   "license": "ISC",
   "dependencies": {
     "concurrently": "^8.2.2",
+    "pg": "^8.16.0",
     "task-manager": "file:"
   }
 }
