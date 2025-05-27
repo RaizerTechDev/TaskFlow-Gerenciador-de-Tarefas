@@ -8,7 +8,7 @@
 
 [![Documentação](https://img.shields.io/badge/Documentação-Oficial-success)](https://github.com/RaizerTechDev/TaskFlow-Gerenciador-de-Tarefas/blob/master/Documentation.md)
 
-[( Clique aqui para se `Cadastar` e criar suas `Tasks`)](/)
+[( Clique aqui para se `Cadastar` e criar suas `Tasks`)](https://task-flow-gerenciador-de-tarefas-frontend.vercel.app/)
 
 <br>
   
