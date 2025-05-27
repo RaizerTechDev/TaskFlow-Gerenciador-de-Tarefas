@@ -4,11 +4,12 @@ WORKDIR /app
 
 RUN apk add --no-cache python3 make g++
 
-COPY package*.json ./
+COPY backend/package*.json ./
 
 RUN npm install --omit=dev
 
 ENV NODE_ENV=production
+COPY backend/ .
 EXPOSE 5000
 
 CMD ["node", "src/server.js"]
