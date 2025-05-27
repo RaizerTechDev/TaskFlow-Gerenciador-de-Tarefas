@@ -248,8 +248,6 @@ docker exec -it docker-postgres-1 psql -U postgres -d taskmanager
 psql "postgres://[usuário]:[senha]@[host]:[porta]/[nome_do_banco]?sslmode=require"
 ```
 
-
-
 <br>
 
 ### Comandos úteis no PostgreSQL

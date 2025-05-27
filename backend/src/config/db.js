@@ -1,5 +1,7 @@
 const { Sequelize } = require('sequelize');
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 const sequelize = new Sequelize(
   process.env.DB_NAME,
   process.env.DB_USER,
@@ -9,20 +11,15 @@ const sequelize = new Sequelize(
     port: process.env.DB_PORT,
     dialect: 'postgres',
     dialectOptions: {
-      ssl: {
-        require: true,
-        rejectUnauthorized: false // Necessário para conexão com Render PostgreSQL
-      }
+      ...(isProduction && {
+        ssl: {
+          require: true,
+          rejectUnauthorized: false 
+        }
+      })
     },
-    logging: false,
-    protocol: 'postgres',
-    ssl: true // Habilita SSL
+    logging: console.log, 
   }
 );
-
-// Teste de conexão (opcional)
-sequelize.authenticate()
-  .then(() => console.log('Conexão com o banco estabelecida!'))
-  .catch(err => console.error('Erro de conexão:', err));
 
 module.exports = sequelize;

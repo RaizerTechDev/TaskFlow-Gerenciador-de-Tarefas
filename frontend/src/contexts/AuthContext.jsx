@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
   const navigate = useNavigate()
   const { clearTasks } = useTasks()
 
-   const login = async (credentials) => {
+  const login = async (credentials) => {
     try {
       const { data } = await api.post('/auth/login', {
         email: credentials.email,
@@ -25,7 +25,8 @@ export const AuthProvider = ({ children }) => {
       throw error.response?.data || { message: error.message || 'Login failed' }
     }
   }
-
+  
+  
   const register = async (userData) => {
     try {
       const { data } = await api.post('/auth/register', userData);
