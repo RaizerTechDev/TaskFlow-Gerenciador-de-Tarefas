@@ -7,7 +7,7 @@ body {
    margin: 0;
   min-height: 100vh;
   color: white;
-  overflow: hidden;
+  
 }
 
 .main-content {
@@ -315,7 +315,5 @@ input.autocomplete:-webkit-autofill {
   .input-field {
     font-size: 1.2rem;    
   }
-
-
 }  
 
