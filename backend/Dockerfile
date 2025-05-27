@@ -11,6 +11,4 @@ COPY . .
 
 EXPOSE 5000
 
-RUN ls -la /app/src
-
 CMD ["node", "src/server.js"]
