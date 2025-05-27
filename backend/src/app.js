@@ -12,7 +12,8 @@ app.use(
     origin: [
       'http://localhost:5173',
       'http://localhost:5180',
-      'http://backend:5173'
+      'http://backend:5173',
+      'https://task-flow-gerenciador-de-tarefas-frontend.vercel.app'
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
