@@ -290,9 +290,9 @@ input.autocomplete:-webkit-autofill {
     margin-top: 35px;
     font-size: 1.5rem,
   }
-  
+
   .relative {
-    margin-top: -10px;
+    margin-top: -30px;
   }
 
   .margin-image
@@ -307,5 +307,15 @@ input.autocomplete:-webkit-autofill {
   .task-form-scroll {
     max-height: 60vh;
   }
+
+  .text-new-task {   
+    font-size: 1.3rem;
+  }
+
+  .input-field {
+    font-size: 1.2rem;    
+  }
+
+
 }  
 
