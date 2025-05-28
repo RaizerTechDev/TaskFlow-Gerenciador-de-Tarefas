@@ -1,4 +1,4 @@
-# Estrutura de Arquivos do Backend
+# Backend
 
 backend/
 ├── src/
@@ -30,6 +30,8 @@ Estrutura de Arquivos do Docker│   ├── utils/
 └── package-lock.json
 
 --------------------
+
+# Frontend
 
 frontend/
 ├── public/
@@ -75,7 +77,7 @@ frontend/
 
 ------------------
 
-# Estrutura de Arquivo do Docker
+# Docker
 
 docker/
 ├── docker-compose.yml/
