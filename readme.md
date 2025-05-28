@@ -216,7 +216,7 @@ docker-compose -f docker/docker-compose.yml up --build
 
 ### Parar todos os serviços
 ```bash
-docker-compose -f docker/docker-compose.yml down
+docker-compose -f docker/docker-compose.yml down -v
 ```
 
 <br>
