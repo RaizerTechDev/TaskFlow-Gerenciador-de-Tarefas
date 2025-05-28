@@ -1,11 +1,23 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import TaskForm from './TaskForm'
 import TaskList from './TaskList'
 import { useAuth } from '../../contexts/AuthContext'
 
 const Dashboard = () => {
   const [showForm, setShowForm] = useState(false)
+  const navigate = useNavigate();
   const { user } = useAuth()
+
+   useEffect(() => {
+    if (!user) {
+      navigate('/login');
+    }
+  }, [user, navigate]);
+
+  if (!user) {
+    return null; // Ou um loading spinner
+  }
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-8">

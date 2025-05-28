@@ -287,8 +287,11 @@ input.autocomplete:-webkit-autofill {
   }
 
   .login-form input {
-  margin-top: 15px;
-   
+    margin-top: 35px;   
+  } 
+
+  .toggle-password {
+    margin-top: 15px;    
   }
 
   .text-2xl{

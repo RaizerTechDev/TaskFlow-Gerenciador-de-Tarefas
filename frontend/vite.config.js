@@ -10,7 +10,8 @@ export default defineConfig({
     postcss: "./postcss.config.cjs",
   },
   server: {
-    port: process.env.DOCKER ? 5173 : 5180,
+    host: '0.0.0.0',
+    port: 5173, 
     proxy: {
       "/api": {
         target:
@@ -19,6 +20,7 @@ export default defineConfig({
             : "http://localhost:5000",
         changeOrigin: true,
         secure: false,
+        rewrite: (path) => path.replace(/^\/api/, '')
       },
     },
   },

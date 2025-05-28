@@ -74,13 +74,11 @@ const Login = () => {
 
       <form onSubmit={handleSubmit} className="login-form">
         <div>
-          <label htmlFor="email" className="form-group">
-            Email
-          </label>
-          <input
+        <input
             type="email"
             id="email"
             name="email"
+            placeholder='Digite seu email'
             value={credentials.email}
             onChange={handleChange}
             className={`input-field ${errors.email ? 'border-red-500' : ''}`}
@@ -91,15 +89,13 @@ const Login = () => {
           )}
         </div>
 
-        <div>
-          <label htmlFor="password" className="form-group password-group">
-            Senha
-          </label>
+        <div>        
           <div className="relative">
             <input
               type={showPassword ? 'text' : 'password'}
               id="password"
               name="password"
+                placeholder='Digite sua senha'
               value={credentials.password}
               onChange={handleChange}
               className={`input-field ${errors.password ? 'border-red-500' : ''}`}

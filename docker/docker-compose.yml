@@ -32,6 +32,10 @@ services:
     environment:
       - VITE_API_URL=http://localhost:5000/api 
       - VITE_API_URL=http://backend:5000/api
+      - CHOKIDAR_USEPOLLING=true
+      - NODE_ENV=docker
+      - DOCKER=true     
+      
     depends_on:
       - backend
 

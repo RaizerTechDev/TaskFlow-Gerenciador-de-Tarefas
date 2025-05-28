@@ -7,9 +7,35 @@ import { useTasks } from './TaskContext';
 const AuthContext = createContext()
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState(() => {
+    const token = localStorage.getItem('token')
+    if (!token) return null
+    
+    try {
+      const decoded = jwt_decode(token)
+      return { 
+        username: decoded.username, 
+        email: decoded.email 
+      }
+    } catch {
+      return null
+    }
+  })
+  
   const navigate = useNavigate()
   const { clearTasks } = useTasks()
+
+  const checkAuth = () => {
+    const token = localStorage.getItem('token')
+    if (!token) return false
+    
+    try {
+      const decoded = jwt_decode(token)
+      return !!decoded
+    } catch {
+      return false
+    }
+  }
 
   const login = async (credentials) => {
     try {
@@ -64,7 +90,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, register, logout }}>
+    <AuthContext.Provider value={{ user, login, register, logout, checkAuth }}>
       {children}
     </AuthContext.Provider>
   )
