@@ -45,7 +45,7 @@ const Login = () => {
       toast.success('Login realizado com sucesso!');
       navigate('/dashboard');
     } catch (error) {
-      let errorMessage = 'Erro ao realizar login';
+      let errorMessage = 'Credenciais inválidas';
       
       // Captura mensagem específica do backend
       if (error.response?.data) {
