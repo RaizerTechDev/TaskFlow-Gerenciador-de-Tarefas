@@ -55,17 +55,18 @@ Um aplicativo completo de gerenciamento de tarefas com backend (Node.js/Express)
 ### Backend
 [![Node.js](https://img.shields.io/badge/Node.js-18.x-green?logo=node.js&logoColor=white)](https://nodejs.org/)
 ![Express](https://img.shields.io/badge/-Express-000000?logo=express)
-![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?logo=postgresql)
+![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?logo=postgresql&logoColor=black)
 ![JWT](https://img.shields.io/badge/-JWT-000000?logo=json-web-tokens)
 
 ### Frontend
-![React](https://img.shields.io/badge/-React-61DAFB?logo=react)
-![Vite](https://img.shields.io/badge/-Vite-646CFF?logo=vite)
-![TailwindCSS](https://img.shields.io/badge/-TailwindCSS-06B6D4?logo=tailwind-css)
+![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/-Vite-646CFF?logo=vite&logoColor=black)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![TailwindCSS](https://img.shields.io/badge/-TailwindCSS-06B6D4?logo=tailwind-css&logoColor=black)
 
 ### DevOps
-![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker)
-![Postman](https://img.shields.io/badge/-Postman-FF6C37?logo=postman)
+![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=black)
+![Postman](https://img.shields.io/badge/-Postman-FF6C37?logo=postman&logoColor=black)
 
 
 <br>
