@@ -14,7 +14,8 @@
   
 <img src= "https://media.giphy.com/media/3zSF3Gnr7cxMbi6WoP/giphy.gif" align="center" height="55" width="55"> [Demonstração-Projeto-RaizerTech] <img src= "https://media.giphy.com/media/E5DzZsofmgxc9wjbhX/giphy.gif" align="center" height="25" width="25">
 
-<img height="380em" src="frontend/public/readme-video.gif"   align="center">
+<img height="380em" src="frontend/public/Video-Readme.gif
+"   align="center">
 
 <br>
 
