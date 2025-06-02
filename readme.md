@@ -32,7 +32,7 @@
   - [Instalação Backend](#-instalação-backend) 
   - [Instalação Docker](#-instalação-do-docker)  
 - [Execução](#-execução)
-- [Banco de Dados](#acessar-o-banco-de-dados)
+- [Banco de Dados](#️-banco-de-dados-postgresql)
 - [Frontend](#️-frontend)
 - [Implentações de Branches](#implementações-de-branches)
 - [Licença](#licença)
@@ -264,6 +264,9 @@ SELECT * FROMs "Task";
 
 -- Consultar dados da tabela Tasks por "userId" e verificar "status"
 SELECT * FROM "Tasks" ORDER BY "userId" ;
+
+-- Consultar dados da tabela Tasks por "userId" e verificar "status"
+SELECT t.* FROM "Tasks" t   JOIN "Users" u ON t."userId" = u.id  WHERE u.id = 4  ORDER BY t."status";
 
 -- Exemplo: Renomear coluna
 ALTER TABLE "Tasks" RENAME COLUMN "dueDate" TO "taskDate";
