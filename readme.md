@@ -25,7 +25,7 @@
 
 - [Objetivo](#objetivo)
 - [Tecnologias](#tecnologias)
-- [Configuração e Instalação](#️configuração-e-instalação)
+- [Configuração e Instalação](#configuração-e-instalação-do-ambiente)
   - [Pré-requisitos](#pré-requisitos)
   - [Instalação](#-instalação) 
 - [Documentação da API](#-documentação-da-api)
