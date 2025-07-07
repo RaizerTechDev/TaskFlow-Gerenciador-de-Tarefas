@@ -1,6 +1,6 @@
  <div align="center">
 
-# TASK MANAGER APPLICATION
+# Task Manager Application
 
  <div align="center">
 
@@ -23,7 +23,7 @@
 ## 📑 Índice
 <div align="left">
  
-- [TASK MANAGER APPLICATION](#task-manager-application)
+- [Task Manager Application](#task-manager-application)
 - [Objetivo](#objetivo)
 - [Tecnologias](#tecnologias)
 - [Documentação da API](#-documentação-da-api)
