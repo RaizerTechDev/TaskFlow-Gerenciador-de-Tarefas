@@ -12,17 +12,6 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     port:  5173,
-    proxy: {
-      "/api": {
-        target:
-          process.env.NODE_ENV === "docker"
-            ? "http://backend:5000"
-            : "http://localhost:5000",
-        changeOrigin: true,
-        secure: false,
-        rewrite: (path) => path.replace(/^\/api/, '')
-      },
-    },
   },
   resolve: {
     alias: {

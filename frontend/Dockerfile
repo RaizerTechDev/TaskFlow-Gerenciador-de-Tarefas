@@ -2,22 +2,21 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-# 1. Instala dependências de compilação
+# Instala dependências necessárias para alguns pacotes npm
 RUN apk add --no-cache python3 make g++
 
-# 2. Atualiza npm para a última versão COMPATÍVEL
+# Instala a versão estável do npm
 RUN npm install -g npm@10.8.2
 
-# 3. Instalação à prova de falhas
+# Copia os arquivos de dependência primeiro
 COPY package.json .
+
+# Instala as dependências do projeto
 RUN npm install vite@6.3.1 --save-dev --force && \
     npm install --force --legacy-peer-deps
 
-# 4. Copia o resto da aplicação
+# Copia todo o código fonte
 COPY . .
 
-# 5. Verificação final
-RUN npx vite --version
-
-EXPOSE 5173
-CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0", "--port", "5173"]
+# O ponto crítico: Use CMD em vez de RUN para manter o processo ativo
+CMD ["npm", "run", "dev"]
