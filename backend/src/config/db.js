@@ -1,25 +1,21 @@
-const { Sequelize } = require('sequelize');
-
-const isProduction = process.env.NODE_ENV === 'production';
-
-const sequelize = new Sequelize(
-  process.env.DB_NAME,
-  process.env.DB_USER,
-  process.env.DB_PASSWORD,
-  {
-    host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
-    dialect: 'postgres',
-    dialectOptions: {
-      ...(isProduction && {
-        ssl: {
-          require: true,
-          rejectUnauthorized: false 
-        }
-      })
-    },
-    logging: console.log, 
+// backend/src/config/db.config.js
+module.exports = {
+  HOST: process.env.DB_HOST,
+  USER: process.env.DB_USER,
+  PASSWORD: process.env.DB_PASSWORD,
+  DB: process.env.DB_NAME,
+  port: process.env.DB_PORT,
+  dialect: "postgres",
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false
+    }
+  },
+  pool: {
+    max: 5,
+    min: 0,
+    acquire: 30000,
+    idle: 10000
   }
-);
-
-module.exports = sequelize;
+};
