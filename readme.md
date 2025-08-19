@@ -267,7 +267,10 @@ SELECT * FROMs "Tasks";
 SELECT * FROM "Tasks" ORDER BY "userId" ;
 
 -- Consultar dados da tabela Tasks por "userId" e verificar "status"
-SELECT t.* FROM "Tasks" t   JOIN "Users" u ON t."userId" = u.id  WHERE u.id = 4  ORDER BY t."status";
+SELECT t.* FROM "Tasks" t JOIN "Users" u ON t."userId" = u.id AND u.id = 2 ORDER BY t."status";
+
+-- Consultar dados da tabela Tasks por "username" e omite "userId"
+SELECT t.id, t.title,  t.description, t.status,  t."taskDate", u.username FROM "Tasks" t  JOIN "Users" u ON t."userId" = u.id  WHERE u.username = 'Rafa'  ORDER BY t."status";
 
 -- Exemplo: Renomear coluna
 ALTER TABLE "Tasks" RENAME COLUMN "dueDate" TO "taskDate";
