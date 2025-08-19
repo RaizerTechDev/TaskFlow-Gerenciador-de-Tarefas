@@ -11,7 +11,7 @@ app.use(
   cors({
     origin: [
       'http://localhost:5173',
-      'http://localhost:5180',
+      'http://localhost:5174',
       'http://backend:5173',
       'https://task-flow-gerenciador-de-tarefas-frontend.vercel.app'
     ],

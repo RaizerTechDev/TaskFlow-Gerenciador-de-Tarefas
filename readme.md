@@ -245,9 +245,9 @@ docker volume prune
 docker exec -it postgres-db psql -U postgres -d taskmanager
 ```
 
-### Acessar o banco de dados no ```Render```
+### Acessar o banco de dados no ```Neon```
 ```bash
-psql "postgres://[usuário]:[senha]@[host]:[porta]/[nome_do_banco]?sslmode=require"
+psql "postgresql://[DB_USER]:[DB_PASSWORD]@[DB_HOST]]/taskmanager?sslmode=require"
 ```
 
 <br>

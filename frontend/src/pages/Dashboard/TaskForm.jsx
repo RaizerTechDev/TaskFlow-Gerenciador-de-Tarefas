@@ -85,7 +85,7 @@ const TaskForm = ({ onCancel, taskToEdit }) => {
           <input
             type="text"
             id="title"
-            className="input-field focus:ring-2 focus:ring-primary/50"
+             className="input-field placeholder:text-lg placeholder:text-gray-400 focus:ring-2 focus:ring-primary/50"
             placeholder="Digite o título da tarefa"
             value={task.title}
             onChange={(e) => setTask({ ...task, title: e.target.value })}
@@ -102,7 +102,7 @@ const TaskForm = ({ onCancel, taskToEdit }) => {
           </label>
           <textarea
             id="description"
-            className="input-field h-15 focus:ring-2 focus:ring-primary/50"
+            className="input-field placeholder:text-lg h-15 focus:ring-2 focus:ring-primary/50"
             placeholder="Adicione detalhes importantes..."
             value={task.description}
             onChange={(e) => setTask({ ...task, description: e.target.value })}
