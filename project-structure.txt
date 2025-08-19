@@ -82,37 +82,3 @@ frontend/
 
 docker/
 ├── docker-compose.yml/
-
-
-
-├── backend/                # Aplicação Node.js
-│   ├── src/
-│   │   ├── controllers/
-│   │   ├── models/
-│   │   ├── routes/
-│   │   ├── services/
-│   │   ├── validations/
-│   │   └── app.js
-│   ├── package.json
-│   ├── Dockerfile
-│   └── .env
-
-├── frontend/               # Aplicação React/Vite
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   ├── App.jsx
-│   │   └── main.jsx
-│   ├── styles
-│   │   └── index.css
-│   ├── package.json
-│   ├── vite.config.js
-│   ├── Dockerfile
-│   └── .env
-
-
-├── docker-compose.yml
-└── init/                   # Scripts de inicialização do banco
-    ├── init-db.sh
-    └── init.sql

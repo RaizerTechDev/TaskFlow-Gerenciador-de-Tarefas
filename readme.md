@@ -242,7 +242,7 @@ docker volume prune
 
 ### Acessar o banco de dados ```localhost```
 ```bash
-docker exec -it docker-postgres-1 psql -U postgres -d taskmanager
+docker exec -it postgres-db psql -U postgres -d taskmanager
 ```
 
 ### Acessar o banco de dados no ```Render```
@@ -261,7 +261,7 @@ psql "postgres://[usuário]:[senha]@[host]:[porta]/[nome_do_banco]?sslmode=requi
 \d "Tasks"
 
 -- Consultar dados da tabela Tasks
-SELECT * FROMs "Task";
+SELECT * FROMs "Tasks";
 
 -- Consultar dados da tabela Tasks por "userId" e verificar "status"
 SELECT * FROM "Tasks" ORDER BY "userId" ;
